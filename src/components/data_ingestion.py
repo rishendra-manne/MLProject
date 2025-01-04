@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 import sys
-from src.exception import custom_exception
+from src.exception import CustomException
 from src.logger import logging
 
 from sklearn.model_selection import train_test_split
@@ -44,7 +44,7 @@ class DataIngestion:
                 self.config.test_data_path
             )
         except Exception as e:
-            raise custom_exception(e,sys)
+            raise CustomException(e,sys)
 
 
 if __name__ =="__main__":
