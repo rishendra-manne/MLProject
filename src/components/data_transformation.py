@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
+from src.components.data_ingestion import DataIngestion
 from src.exception import CustomException
 from src.logger import logging
 from sklearn.compose import ColumnTransformer
@@ -105,4 +106,8 @@ class DataTransform:
             raise CustomException(e,sys)
 
 
-
+if __name__ =="__main__":
+    data=DataIngestion()
+    x,y=data.ingest(r"C:\Users\mrish\OneDrive\Documents\Churn_Modelling.csv")
+    ob=DataTransform()
+    ob.initaiate_transformation(train_path=x,test_path=y)

@@ -12,7 +12,7 @@ def save_object(obj,path):
         os.makedirs(dir_path,exist_ok=True)
 
         with open(path,'wb') as file_obj:
-            pickle.dump(obj,file_obj)
+            pickle.dump(obj, file_obj)
 
 
     except Exception as e:

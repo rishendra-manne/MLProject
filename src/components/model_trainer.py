@@ -21,7 +21,7 @@ class ModelTrainer:
     def __init__(self):
         self.model_config=ModelTrainerConfig()
 
-    def initiate_model(self,train,test,preprocessor_path):
+    def initiate_model(self,train,test):
 
         try:
 
@@ -58,7 +58,6 @@ class ModelTrainer:
             return model_score
 
         except Exception as e:
-
             raise CustomException(e,sys)
 
 

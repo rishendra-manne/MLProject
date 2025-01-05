@@ -49,4 +49,4 @@ class DataIngestion:
 
 if __name__ =="__main__":
     data=DataIngestion()
-    data.ingest(r"C:\Users\mrish\OneDrive\Documents\Churn_Modelling.csv")
+    data.ingest(r"C:\Users\mrish\OneDrive\Documents\Churn_Modelling.cs")
